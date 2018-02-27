@@ -3,4 +3,6 @@ def prime?(n)
      return false 
    else
      (2..n-1).to_a.all? { |factor| num % factor != 0}
+   end
+  end
 end
