@@ -1,11 +1,10 @@
 def prime?(n)
-  unless n.is_a? Integer
-  puts "That's not an integer."
-  
-  if n%2 !=0 && n!=2
-    puts "#{n} is prime!"
+  if num < 0 or num == 0 or num == 1
+    return false
   else
-    puts "#{n} is not prime."
+    (2..num-1).to_a.all? do |possible_factor|
+      num % possible_factor != 0
+    end
   end
-end
+
 end
